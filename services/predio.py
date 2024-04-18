@@ -103,7 +103,7 @@ def delete():
         result["msg"]="Debe consignar un id"
         return jsonify(result),400
     
-    predio=Predio.query.get(id)
+    predio=Predio.query.get(id_predio)
     if not predio:
         result["status_code"]=400
         result["msg"]="Predio no existe"
